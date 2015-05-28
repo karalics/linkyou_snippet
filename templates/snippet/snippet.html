@@ -1,0 +1,13 @@
+{% load snippet_tags %}
+{{ snippet_list.snippets }}
+{% snippet_list %}
+{% for i in snippet_list %}
+<hr>
+<h3>
+
+{{ i.title }}
+</h3>
+<p>
+{{ i.content|safe }}
+</p>
+{% endfor %}
