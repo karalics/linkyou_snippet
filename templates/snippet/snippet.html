@@ -2,12 +2,17 @@
 {{ snippet_list.snippets }}
 {% snippet_list %}
 {% for i in snippet_list %}
-<hr>
-<h3>
+{% if i.is_activated %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ i.title }}</h3>
+  </div>
+  <div class="panel-body">
+  <p>
+  </p>
+  </div>
+</div>
 
-{{ i.title }}
-</h3>
-<p>
-{{ i.content|safe }}
-</p>
+
+{% endif %}
 {% endfor %}
